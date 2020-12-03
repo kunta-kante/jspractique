@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shopinglist.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Shopping list</h1>
+    <div class="brief">
+        <p>
+            J'aimerai afficher ma liste de course.
+            <br>2/ Génial ce formulaire va le permettre. Editez un fichier javascript permettant de lister ma liste de course sous le formulaire.
+            <br>3/ Le bouton "supprimer ma liste" doit effacer la liste à l'écran.
+            <br>(voir shopping-list.html)
+        </p>
+    </div>
+    <form action="" id="formulaire" style="text-align: center;">
+        <input type="text" placeholder="maListeDeCourse">
+        <button id="bouton">Envoyer</button>
+        <button id="Supprime">Supprimer ma liste</button>
+    </form>
+    <div id="maListeDeCourse" style="display: none;">
+        <li>oil</li>
+        <li>palm oil</li>
+        <li>riz</li>
+        <li>pain</li>
+        <li>lait</li>
+    </div>
+    <script>
+        const button = document.querySelector('#button')
+        const deletelist = document.querySelector('#suppreme')
+        const userinput = document.querySelector('#userInput')
+        const list = document.querySelector('#maListeDeCours')
+        button.addEventListener('click', (event) => {
+            event.preventDefault()
+            list.insertAdjacentElement('beforeend', '<p>${userInput.value }</p>')
+            userinput.value = '';
+        })
+        deletelist.addEventListener('click', (event) => {
+            event.preventDefault();
+            list.innerHTML = '';
+        })
+    </script>
+</body>
+
+</html>

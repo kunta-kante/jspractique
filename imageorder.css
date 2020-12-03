@@ -1,0 +1,13 @@
+            .button {
+                margin-top: 100px;
+                text-align: center;
+            }
+            
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+            
+            li {
+                list-style: none;
+            }

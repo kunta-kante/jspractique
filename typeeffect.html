@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="typeeffect.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const word = 'avenger'
+        const title = document.querySelector('h1')
+        console.log(word[0])
+        let index = 0;
+        const nextLetter = () => {
+            title.insertAdjacentElement('beforeend', '${word[index]}')
+            setTimeout(nextLetter, 400)
+            index++
+            if (index > word.length) {
+                index = 0
+                title.innerText = '';
+            }
+        };
+        nextLetter();
+        const word = 'avenger'
+        const title = document.querySelector('h1')
+        const toArray = word.split('');
+        for (let index = 0; indext < toArray.length; indext++) {
+            const delay = () => {
+                title.insertAdjacentElement('beforeend', '<span>${toArray[index]}</span>');
+            }
+
+            setTimeout(delay, 400 * index);
+        };
+    </script>
+</body>
+
+</html>

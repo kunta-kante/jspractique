@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imageorder.css">
+    <title>image</title>
+</head>
+
+<body>
+    <div id="imageBloc">
+        <div class="button">
+            <button id="all"> All</button>
+            <button id="paramoteur">paramoteur</button>
+            <button id="multiaxe">multiaxe</button>
+        </div>
+
+        <ul class="paramoteur">
+            <li><img src="paramoteur1.jpg" width="300px" height="200px" alt="" id="ma-super-image1"></li>
+            <li><img src="paramoteur2.jpg" width="300px" height="200px" alt="" id="ma-super-image2"></li>
+            <li><img src="paramoteur3.jpg" width="300px" height="200px" alt="" id="ma-super-image3"></li>
+        </ul>
+        <ul class="multiaxe">
+            <li><img src="multiaxe1.jpg" width="300px" height="200px" alt="" id="ma-super-image4"></li>
+            <li><img src="multiaxe2.jpg" width="300px" height="200px" alt="" id="ma-super-image5"></li>
+            <li><img src="multiaxe3.jpg" width="300px" height="200px" alt="" id="ma-super-image6"></li>
+        </ul>
+    </div>
+    <script>
+        //TODO
+        //1 - Séléctionner l'éléments HTML 'bouton paramoteur' avec querySelector et le mettre dans une variable.
+        //2 - Séléctionner la liste ul 'multiaxe' avec querySelector et la mettre dans une variable.
+        //3 - Placer un 'micro' avec un addEventListener (click) sur l'élément HTML 'bouton paramoteur'
+        //4 - Dans le callback de l'addEventListener, faire disparaitre le liste 'multiaxe' à l'aide de ce code: multiaxe.style.display = 'none'; Tester cette instruction dans la console du navigateur.
+
+
+        const paramoteur = document.querySelector('#paramoteur');
+        const multi = document.querySelector('.multiaxe');
+        paramoteur.addEventListener(`click`, multiaxe);
+
+        function multiaxe() {
+            multi.style.display = "none"
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="stars.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="star">
+        <ul id="list-of-stars">
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+        </ul>
+    </div>
+    <div class="test"></div>
+    <script>
+        const stars = document.querySelectorAll('#list-of-stars li');
+        stars.forEach((star) => {
+            star.classList.add('gess')
+        });
+        for (let i = 0; i < stars.length; i++) {
+            stars[i].addEventListener('click', () => {
+                for (let a = 0; a < stars.length; a++) {
+                    // stars[a].classList.remove('gee')
+                    stars[a].classList.toggle('gess')
+                }
+                // for (let b = 0; b < stars.length; b++) {
+                //     stars[b].classList.remove('gee')
+                //         // stars[b].classList.add('gee')
+                // }
+            });
+        }
+    </script>
+</body>
+
+</html>

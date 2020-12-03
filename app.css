@@ -1,0 +1,27 @@
+   body {
+       background-image: url(multiaxe1.jpg);
+   }
+   
+   .flex {
+       margin-top: 200px;
+       display: grid;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   h1 {
+       font-size: 50px;
+   }
+   
+   .button {
+       font-size: 40px;
+       border: 2px solid black;
+       border-radius: 50px;
+       -webkit-border-radius: 50px;
+       transition: all 0.5s ease;
+       background: red;
+   }
+   
+   .button:hover {
+       background: green;
+   }

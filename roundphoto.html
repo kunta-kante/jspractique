@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="roundphoto.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Round photo</h1>
+    <div class="brief">
+        <p>
+            Compos let meouhaité : créer une ombre au passage de la souris et arrondir la photo lorsque l'on click dessus.
+            <br> (voir round-photo.html)
+        </p>
+    </div>
+    <div id="photo1"><img src="img/multiaxe1.jpg" width="20%"></div>
+    <script>
+        const image = document.querySelector('img')
+        image.addEventListener('click', (event) => {
+            event.currentTarget.classList.toggle('circle')
+        })
+    </script>
+</body>
+
+</html>

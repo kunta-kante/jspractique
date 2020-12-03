@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="slide.css">
+    <title>Document</title>
+</head>
+
+<body class="row">
+    <div class="col-sm">
+        <img id="slide" width="400" height="300">
+    </div>
+    <!-- la balise img contient des attributs. Tu dois écrire un attribut src de la balise img avec JavaScript pour pouvoir afficher une image. -->
+    <!-- Etapes :
+    1 - Cibler ta balise <img> grâce à son id avec javaScript (getElementById)
+    2 - Cibler l'attribut src de cette balise  : getAttribute(nomdelattribut) 
+    3 - Ecrire le chemin de l'image dans cet attribut src grâce à JavaSCript (innerHTML) -->
+    <script>
+        const img = document.querySelector('#slide')
+        console.log(img)
+        const images = ['img/multiaxe1.jpg', 'img/multiaxe2.jpg', 'img/multiaxe3.jpg']
+        let index = 0;
+        const myslide = () => {
+            img.src = images[index]
+            index++
+            if (index >= images.length) {
+                index = 0;
+            }
+            setTimeout(myslide, 2000)
+        };
+        myslide();
+    </script>
+</body>
+
+</html>

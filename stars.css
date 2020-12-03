@@ -1,0 +1,17 @@
+.gess {
+    color: yellow;
+}
+
+
+/* .gee {
+    color: gray;
+} */
+
+#list-of-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    list-style: none;
+    margin-top: 20%;
+}

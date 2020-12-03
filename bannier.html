@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bannier.css">
+    <title>bannier</title>
+</head>
+
+<body>
+    <h1>Bannière JS (Methode commercial pour proposer une promo ou une possibilité d'inscription)</h1>
+    <div class="brief">
+        <p>
+            Vous développez un site marchand.
+            <br>1/ Faites apparaitre une bannière (proposition d'inscription à la newsletter) 5 secondes après le chargement de la page.
+            <br>2/ Cette bannière doit être fixer en bas de page.
+            <br>3/ Placez un bouton en haut à droite de la bannière pour fermer celle-ci.
+            <br>(voir bannière.html)
+        </p>
+        <script>
+            const banniére = document.querySelector('banniére')
+            const button = document.querySelector('.closeBanniére')
+
+            function closeBanniére() {
+                banniére.style.display = "none"
+
+            }
+
+            function displayBanniére() {
+                banniére.style.display = "block"
+
+            }
+            window.onload = function() {
+                setTimeout(banniére, 3000);
+            }
+
+            modal.addEventListener(`click`, closeBanniére);
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menuscrolldown.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="menu">
+        <ul style="text-align: center;">
+            <li>Accueil</li>
+            <li>Produit</li>
+            <li>Equipe</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <h1>Créez un menu qui se fixe en haut de la page lorsqu'on scroll-down au dela de 70 px
+            <br>(voir menu-scroll-down.html)
+        </h1>
+    </div>
+    <script>
+        const navbar = document.querySelector('#menu');
+        window.addEventListener('scroll', (event) => {
+            let scrollLimit = event.currentTarget.scrollY;
+            if (scrollLimit >= 70) {
+                navbar.classList.add('fixed-position')
+            } else(navbar.classList.remove('fixed-position'));
+        });
+    </script>
+</body>
+
+</html>
